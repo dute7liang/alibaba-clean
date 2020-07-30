@@ -6,7 +6,8 @@
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>acos-discovery-provider</module>
+        <module>nacos-discovery-provider</module>
+        <module>nacos-discovery-consumer</module>
     </modules>
     <name>parent</name>
     <description>Spring Cloud Alibaba clean</description>
@@ -14,7 +15,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <spring.cloud.alibaba.version>2.2.1</spring.cloud.alibaba.version>
+        <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
         <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
     </properties>
 
