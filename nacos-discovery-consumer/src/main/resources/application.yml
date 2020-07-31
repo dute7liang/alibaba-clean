@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8091
 spring:
   application:
     name: nacos-consumer
@@ -14,8 +14,17 @@ management:
   endpoints:
     web:
       exposure:
-        # 开发所有的外置接口
+        # 开放挂载点
         include: "*"
+# nacos-provider 服务使用指定的负载均衡 ribbon
+#nacos-provider:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+# 表示ribbon是否启用饥饿加载。 默认不开启，则第一次访问会相对比较慢
+#ribbon:
+#  eager-load:
+#    enabled: true
+#    clients: ssss,ssss
 feign:
   client:
     config:
