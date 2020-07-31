@@ -11,4 +11,5 @@ management:
   endpoints:
     web:
       exposure:
+        # 开发所有的外置接口
         include: "*"
