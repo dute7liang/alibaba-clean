@@ -8,6 +8,8 @@
     <modules>
         <module>nacos-discovery-provider</module>
         <module>nacos-discovery-consumer</module>
+        <module>gateway</module>
+        <module>user</module>
     </modules>
     <name>parent</name>
     <description>Spring Cloud Alibaba clean</description>
@@ -15,6 +17,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
         <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
         <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
         <spring.cloud.version>Hoxton.SR3</spring.cloud.version>

@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author dute7liang
  */
-//@Configuration
 /**
  * 默认的负载均衡
  */
