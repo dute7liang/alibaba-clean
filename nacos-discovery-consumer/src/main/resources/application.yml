@@ -26,3 +26,5 @@ feign:
         loggerLevel: basic
   sentinel:
     enabled: true
+name:
+  test: dajkbceibcjs

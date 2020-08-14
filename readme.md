@@ -1,8 +1,12 @@
 # Spring Cloud Alibaba Clean
 
-## Nacos
+## Nacos-服务发现
 
 元数据：服务级别、集群级别、实例级别
+
+## Nacos-配置中心
+
+
 
 ## Ribbon
 
@@ -176,7 +180,9 @@ feign:
 
 ### Sentinel 代码的配置
 
-### Sentinel 自定义限流代码
+具体可见[官网](https://github.com/alibaba/Sentinel/wiki/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8)
+
+- Sentinel 自定义限流代码
 
 ```java
 Entry entry = null;
@@ -187,6 +193,9 @@ try{
 }catch(BlackException e){
     log.warn("限流了!");
     return "返回限流后的数据";
+} catch (Exception ex) {
+  // 若需要配置降级规则，需要通过这种方式记录业务异常
+  Tracer.traceEntry(ex, entry);
 }finally{
     if(entry != null){
         entry.exit();
@@ -194,7 +203,8 @@ try{
 }
 ```
 
-也可以直接使用`@SentinelResource`注解搞定
+- 也可以直接使用`@SentinelResource`注解搞定
+- 使用代码定义流控规则
 
 ### Sentinel 的持久化配置
 
@@ -227,3 +237,4 @@ try{
 ### 官网限流
 
 内置，令牌桶-基于Redis
+
